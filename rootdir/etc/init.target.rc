@@ -332,3 +332,6 @@ on property:sys.boot_completed=1
 # Backlight Dimmer
   chown system system /sys/module/mdss_fb/parameters/backlight_dimmer
   chmod 0660 /sys/module/mdss_fb/parameters/backlight_dimmer
+
+# default country code
+setprop ro.boot.wificountrycode 00

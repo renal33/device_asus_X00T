@@ -323,3 +323,8 @@ on property:sys.boot_completed=1
     write /sys/class/gpio/gpio12/value 0
     write /sys/class/gpio/unexport 12
 # Huaqin add for ZQL1820-84 by liunianliang at 2018/07/16 end
+
+#ZenFone Parts Permissions
+# USB Fastcharge
+  chown system system /sys/kernel/fast_charge/force_fast_charge
+  chmod 0660 /sys/kernel/fast_charge/force_fast_charge

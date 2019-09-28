@@ -299,6 +299,23 @@ service vendor.hvdcp_opti /vendor/bin/hvdcp_opti
      user root
      group system wakelock
 
+# Logcat
+service logger /system/bin/logcat -b all -D -f /cache/boot_log.txt
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
+    
+on post-fs-data
+    # Clear existing log and start the service
+    rm /cache/boot_log.txt
+    start logger
+
+on property:sys.boot_completed=1
+    # Stop the logger service
+    stop logger    
+
 #Huaqin modify for disable sar in Indonesia by chenyijun5 at 2018/03/20 start
 on property:ro.config.versatility=ID
     write /sys/module/sx9310/parameters/sar_switcher 1

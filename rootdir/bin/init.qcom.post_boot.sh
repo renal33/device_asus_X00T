@@ -4381,32 +4381,3 @@ setprop persist.vendor.mmi.misc_dev_path $real_path
 	  echo "schedutil" > /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
 	  setprop sys.use_fifo_ui 1
 	fi
-
-# Enable Perf configs for HMP only
-if echo "$available_governors" | grep interactive; then
-	
-if [ ! -f /vendor/etc/perf/perfboostsconfig.xml ]; then
-	mv /vendor/etc/perf/perfboostsconfig.xml.bkp /vendor/etc/perf/perfboostsconfig.xml;
-fi
-
- # rearm commonresourceconfigs.xml
-if [ ! -f /vendor/etc/perf/commonresourceconfigs.xml ]; then
-	mv /vendor/etc/perf/commonresourceconfigs.xml.bkp /vendor/etc/perf/commonresourceconfigs.xml;
-fi
-
- # rearm targetconfig.xml
-if [ ! -f /vendor/etc/perf/targetconfig.xml ]; then
-	mv /vendor/etc/perf/targetconfig.xml.bkp /vendor/etc/perf/targetconfig.xml;
-fi
-
- # rearm targetresourceconfigs.xml
-if [ ! -f /vendor/etc/perf/targetresourceconfigs.xml ]; then
-	mv /vendor/etc/perf/targetresourceconfigs.xml.bkp /vendor/etc/perf/targetresourceconfigs.xml;
-fi
-
- # rearm powerhint.xml
-if [ ! -f /vendor/etc/powerhint.xml ]; then
-	mv /vendor/etc/powerhint.xml.bkp /vendor/etc/powerhint.xml;
-fi
-
-fi 

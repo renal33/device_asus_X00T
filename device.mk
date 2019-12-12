@@ -193,7 +193,6 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-service \
   
 PRODUCT_PACKAGES += \
-    vendor.display.config@1.7 \
     copybit.sdm660 \
     gralloc.sdm660 \
     hwcomposer.sdm660 \
@@ -204,7 +203,10 @@ PRODUCT_PACKAGES += \
     libvulkan \
     libtinyxml \
     memtrack.sdm660 \
-    libgenlock
+    libgenlock \
+    vendor.display.config@1.9 \
+    vendor.display.config@1.9_vendor
+
 
 # DRM
 PRODUCT_PACKAGES += \

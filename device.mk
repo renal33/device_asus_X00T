@@ -99,6 +99,8 @@ PRODUCT_PACKAGES += \
     libqcomvisualizer \
     libqcomvoiceprocessing \
     libvolumelistener \
+    libspkrprot \
+    libhfp \
     audio.bluetooth.default \
     android.hardware.bluetooth.audio@2.0-impl
 

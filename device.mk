@@ -211,7 +211,7 @@ PRODUCT_PACKAGES += \
     qcom.fmradio.xml \
     qcom.fmradio
 
-PRODUCT_BOOT_JARS +=
+PRODUCT_BOOT_JARS += \
     qcom.fmradio
 
 PRODUCT_PACKAGES += \

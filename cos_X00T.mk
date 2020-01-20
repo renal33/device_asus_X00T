@@ -21,6 +21,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk
 
 # Inherit some common Cosmic OS stuff
 $(call inherit-product, vendor/cos/config/common_full_phone.mk)
+COSMIC_BUILD_TYPE := OFFICIAL
 
 # Inherit from X00T device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)

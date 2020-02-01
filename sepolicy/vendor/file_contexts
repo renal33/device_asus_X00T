@@ -1,11 +1,9 @@
 # bluetooth
 /(vendor|system/vendor|system)/bin/nvram_btwifi                         u:object_r:nvram_btwifi_exec:s0
+/(vendor|system/vendor)/bin/init\.btmac\.sh                                   u:object_r:init_blutmac_exec:s0
 
 # Keylayout
-/(system/)?vendor/usr/keylayout(/.*)?                                   u:object_r:vendor_keylayout_file:s0
-
-# Goodix Fingerprint
-/dev/goodix_fp                                                          u:object_r:fingerprintd_device:s0
+/(vendor|system/vendor)/usr/keylayout(/.*)?                                   u:object_r:vendor_keylayout_file:s0
 
 # Sensors
 /sys/devices/virtual/input/input[0-9]+/stk3x1x-proximity(/.*)?          u:object_r:sysfs_sensors:s0
@@ -16,6 +14,7 @@
 
 # Fingerprint
 /dev/fpsdev0                                                            u:object_r:cdfinger_device:s0
+/dev/goodix_fp                                                          u:object_r:fingerprintd_device:s0
 /data/system/cdfinger(/.*)?                                             u:object_r:cdfinger_data_file:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service-X00T u:object_r:hal_fingerprint_default_exec:s0
 
@@ -29,8 +28,9 @@
 /bt_firmware(/.*)?                                                      u:object_r:bt_firmware_file:s0
 /firmware(/.*)?                                                         u:object_r:firmware_file:s0
 
-# Lights HAL
-/(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.X00T    u:object_r:hal_light_default_exec:s0
+# Lights
+/sys/class/leds(/.*)?								u:object_r:sysfs_leds:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.asus_X00T    u:object_r:hal_light_default_exec:s0
 
 # Thermal
 /sys/devices/soc/780000.qcom,msm-core/uio/uio1(/.*)?                    u:object_r:sysfs_uio_file:s0
@@ -41,6 +41,14 @@
 
 # Gestures
 /sys/kernel/touchpanel/dclicknode                                       u:object_r:sysfs:s0
+/sys/kernel/touchpanel/gesture_node                                           u:object_r:sysfs:s0
 
 # DRM
 /(vendor|system/vendor)/bin/hw/android\.hardware\.drm@1\.1-service.widevine    u:object_r:hal_drm_widevine_exec:s0
+
+# Google services
+/data/data/com\.google\.android\.gms						u:object_r:app_data_file:s0
+/data/data/com\.google\.android\.gms/databases/dg\.db				u:object_r:app_data_file:s0
+
+# Fix Baseband
+/(vendor|system/vendor)/bin/fix_baseband.sh                                       u:object_r:fix_baseband_exec:s0

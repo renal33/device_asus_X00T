@@ -1,0 +1,8 @@
+allow radio sysfs_kgsl:dir { search };
+allow radio baseband_prop:property_service set;
+allow radio vendor_file:file { execute getattr open read };
+allow radio vendor_file:file rx_file_perms;
+allow radio cdfinger_prop:file { read };
+allow radio hal_audio_prop:file { read };
+binder_call(radio, gpuservice)
+binder_call(radio, init)

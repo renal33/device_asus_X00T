@@ -1,0 +1,3 @@
+allow bootanim app_data_file:dir search;
+allow bootanim vendor_file:file { execute getattr open read };
+allow bootanim sysfs_kgsl:dir { search read };

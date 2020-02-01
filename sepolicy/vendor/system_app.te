@@ -1,3 +1,5 @@
+get_prop(system_app, baseband_prop)
+get_prop(system_app, camera_prop)
 allow system_app proc_pagetypeinfo:file r_file_perms;
 allow system_app sysfs_zram:dir search;
 allow system_app sysfs_zram:file r_file_perms;
@@ -9,6 +11,14 @@ allow system_app sysfs:file { getattr read write open };
 allow system_app sysfs_vibrator:dir search;
 allow system_app sysfs_vibrator:file { getattr read write open };
 allow system_app sysfs_touchpanel:dir search;
+allow system_app sysfs_touchpanel:file { getattr read write open };
 allow system_app sysfs_dclicknode:file { getattr read write open };
 allow system_app sysfs_leds:dir search;
-allow system_app sysfs_leds:file { open getattr write };
+allow system_app sysfs_gesture_node:file { getattr read write open };
+allow system_app app_data_file:dir search;
+allow system_app vendor_cfg_prop:file { getattr open read };
+allow system_app sysfs_leds:file {  getattr read write open };
+allow system_app sysfs:file { getattr write open read };
+allow system_app proc:file { open write };
+allow system_app selinuxfs:file r_file_perms;
+allow system_app baseband_prop:file { read };

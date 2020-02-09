@@ -28,3 +28,4 @@ allow init device:chr_file { read write open ioctl };
 allow init self:socket { read write };
 allow init self:netlink_route_socket { read };
 binder_call(init, radio)
+allow init sysfs_battery_supply:file { open write };

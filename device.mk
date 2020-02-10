@@ -23,7 +23,7 @@
 
 #APN Configurations 
 PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/configs/apns-conf.xml:system/etc/apns-conf.xml
+	$(LOCAL_PATH)/configs/apns-conf.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/apns-conf.xml
 
 # Prebuilts
 PRODUCT_PACKAGES += \
@@ -219,7 +219,7 @@ PRODUCT_PACKAGES += \
 
 # Exclude TOF sensor from InputManager
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/excluded-input-devices.xml:system/etc/excluded-input-devices.xml
+    $(LOCAL_PATH)/configs/excluded-input-devices.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/excluded-input-devices.xml
 
 # Fingerprint feature
 PRODUCT_PACKAGES += \
@@ -311,7 +311,7 @@ PRODUCT_PACKAGES += \
 
 # Low power Whitelist
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/qti_whitelist.xml:system/etc/sysconfig/qti_whitelist.xml
+    $(LOCAL_PATH)/configs/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml
 
 # Manifest replacement for non NFC variant
 PRODUCT_COPY_FILES += \

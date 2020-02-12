@@ -114,6 +114,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.cne.feature=true
 
+# Dirac algo tsx 9/12
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.dirac.acs.controller=qem \
+    persist.dirac.acs.storeSettings=1 \
+    persist.dirac.acs.ignore_error=1 \
+    ro.audio.soundfx.dirac=true \
+    persist.audio.dirac.speaker=true
+
 # DRM
 PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true

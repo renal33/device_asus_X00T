@@ -33,8 +33,8 @@ PRODUCT_PACKAGES += \
     Lawnchair
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilts/priv-app/Lawnchair/permissions/privapp-permissions-lawnchair.xml:system/etc/privapp-permissions-lawnchair.xml \
-    $(LOCAL_PATH)/prebuilts/priv-app/Lawnchair/permissions/lawnchair-hiddenapi-package-whitelist.xml:system/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml
+    $(LOCAL_PATH)/prebuilts/Lawnchair/permissions/privapp-permissions-lawnchair.xml:system/etc/privapp-permissions-lawnchair.xml \
+    $(LOCAL_PATH)/prebuilts/Lawnchair/permissions/lawnchair-hiddenapi-package-whitelist.xml:system/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml
 
 
 PRODUCT_PROPERTY_OVERRIDES += \

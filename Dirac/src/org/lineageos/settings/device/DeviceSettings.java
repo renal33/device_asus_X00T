@@ -35,7 +35,7 @@ public class DeviceSettings extends PreferenceFragment implements
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-        setPreferencesFromResource(R.xml.preferences_xiaomi_parts, rootKey);
+        setPreferencesFromResource(R.xml.preferences_dirac, rootKey);
 
         boolean enhancerEnabled;
         try {

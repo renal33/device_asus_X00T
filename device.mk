@@ -30,7 +30,8 @@ PRODUCT_PACKAGES += \
     ScreenRecorder \
     LawnConf \
     Lawnfeed \
-    Lawnchair
+    Lawnchair \
+    Dirac
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilts/Lawnchair/permissions/privapp-permissions-lawnchair.xml:system/etc/privapp-permissions-lawnchair.xml \

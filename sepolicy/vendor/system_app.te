@@ -22,3 +22,4 @@ allow system_app sysfs:file { getattr write open read };
 allow system_app proc:file { open write };
 allow system_app selinuxfs:file r_file_perms;
 allow system_app baseband_prop:file { read };
+allow system_app apk_data_file:dir { write };

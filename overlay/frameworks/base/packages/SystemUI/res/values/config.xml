@@ -28,4 +28,9 @@ customized
         <item>7</item> <!-- 3: HIGH -->
         <item>27</item> <!-- 4: SUN -->
     </integer-array>
+
+    <!-- Max visible notification icons -->
+    <integer name="config_maxVisibleNotificationIcons">9</int>
+    <integer name="config_maxVisibleNotificationIconsWhenDark">9</int>
+
 </resources>

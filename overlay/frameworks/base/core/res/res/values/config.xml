@@ -561,10 +561,6 @@
     <!-- Whether the display blanks itself when transition from a doze to a non-doze state -->
     <bool name="config_displayBlanksAfterDoze">true</bool>
 
-    <!-- Max visible notification icons -->
-    <integer name="config_maxVisibleNotificationIcons">8</integer>
-    <integer name="config_maxVisibleNotificationIconsWhenDark">9</integer>
-
     <!-- Older rotation sensors are not setting event.timestamp correctly. Setting to
          true will use SystemClock.elapsedRealtimeNanos() to set timestamp. -->
     <bool name="config_useSystemClockforRotationSensor">true</bool>
